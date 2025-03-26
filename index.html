@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhagavad Gita Shloka Generator</title>
+    <link rel="stylesheet" href="stylenew.css">
+</head>
+
+<body>
+
+    <!-- Audio Player (hidden initially) -->
+    <audio id="backgroundMusic">
+        <source src="music.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="hero">
+        <div class="container">
+            <h1>Bhagavad Gita Shloka Generator</h1>
+            <p class="description">Click the button below to get a random verse from the Bhagavad Gita as a message from Lord Krishna.</p>
+
+            <button id="generateBtn">Generate Shloka</button>
+
+            <div id="shloka" class="shloka">
+                <p id="verse"></p>
+                <p id="translation"></p>
+            </div>
+
+            <!-- Play Music Button -->
+            <button id="playMusicBtn">Play Music</button>
+        </div>
+    </div>
+
+    <!-- Floating Text -->
+    <div class="floating-text">
+        In earlier times, when individuals encountered life's challenges, they would turn to the Bhagavad Gita, opening its sacred pages and reciting a random verse, believing it to be divine guidance directly from God. This practice not only brought them solace but also motivated them to navigate through life's trials with renewed strength and purpose. In today's digital era, we can carry on this ancient tradition in a modernized form, seamlessly accessing the wisdom of the Gita through digital means, allowing its empowering verses to inspire and guide us anytime, anywhere.
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Bhagavad Gita Shloka Generator. All Rights Reserved.</p>
+    </footer>
+
+    <script src="cript.js"></script> <!-- Link to your JS file -->
+
+    <script>
+        // JavaScript to control audio play/pause
+        const music = document.getElementById('backgroundMusic');
+        const playMusicBtn = document.getElementById('playMusicBtn');
+
+        // Toggle play and pause on button click
+        playMusicBtn.addEventListener('click', function () {
+            if (music.paused) {
+                music.play();
+                playMusicBtn.textContent = 'Pause Music'; // Change button text when music is playing
+            } else {
+                music.pause();
+                playMusicBtn.textContent = 'Play Music'; // Change button text when music is paused
+            }
+        });
+    </script>
+
+</body>
+
+</html>
